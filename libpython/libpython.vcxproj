@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{127A71F7-ED2A-44CC-9832-243A5B34237D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libpython</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="config.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="config.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="config.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="config.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Modules\getbuildinfo.c" />
+    <ClCompile Include="src\Modules\_bisectmodule.c" />
+    <ClCompile Include="src\Modules\_blake2\blake2module.c" />
+    <ClCompile Include="src\Modules\_blake2\blake2b_impl.c" />
+    <ClCompile Include="src\Modules\_blake2\blake2s_impl.c" />
+    <ClCompile Include="src\Modules\_codecsmodule.c" />
+    <ClCompile Include="src\Modules\_collectionsmodule.c" />
+    <ClCompile Include="src\Modules\_csv.c" />
+    <ClCompile Include="src\Modules\_functoolsmodule.c" />
+    <ClCompile Include="src\Modules\_heapqmodule.c" />
+    <ClCompile Include="src\Modules\_json.c" />
+    <ClCompile Include="src\Modules\_localemodule.c" />
+    <ClCompile Include="src\Modules\_lsprof.c" />
+    <ClCompile Include="src\Modules\_math.c" />
+    <ClCompile Include="src\Modules\_pickle.c" />
+    <ClCompile Include="src\Modules\_randommodule.c" />
+    <ClCompile Include="src\Modules\_sha3\sha3module.c" />
+    <ClCompile Include="src\Modules\_sre.c" />
+    <ClCompile Include="src\Modules\_stat.c" />
+    <ClCompile Include="src\Modules\_struct.c" />
+    <ClCompile Include="src\Modules\_weakref.c" />
+    <ClCompile Include="src\Modules\arraymodule.c" />
+    <ClCompile Include="src\Modules\atexitmodule.c" />
+    <ClCompile Include="src\Modules\audioop.c" />
+    <ClCompile Include="src\Modules\binascii.c" />
+    <ClCompile Include="src\Modules\cmathmodule.c" />
+    <ClCompile Include="src\Modules\_datetimemodule.c" />
+    <ClCompile Include="src\Modules\errnomodule.c" />
+    <ClCompile Include="src\Modules\faulthandler.c" />
+    <ClCompile Include="src\Modules\gcmodule.c" />
+    <ClCompile Include="src\Modules\hashtable.c" />
+    <ClCompile Include="src\Modules\itertoolsmodule.c" />
+    <ClCompile Include="src\Modules\main.c" />
+    <ClCompile Include="src\Modules\mathmodule.c" />
+    <ClCompile Include="src\Modules\md5module.c" />
+    <ClCompile Include="src\Modules\mmapmodule.c" />
+    <ClCompile Include="src\Modules\_opcode.c" />
+    <ClCompile Include="src\Modules\_operator.c" />
+    <ClCompile Include="src\Modules\parsermodule.c" />
+    <ClCompile Include="src\Modules\posixmodule.c" />
+    <ClCompile Include="src\Modules\rotatingtree.c" />
+    <ClCompile Include="src\Modules\sha1module.c" />
+    <ClCompile Include="src\Modules\sha256module.c" />
+    <ClCompile Include="src\Modules\sha512module.c" />
+    <ClCompile Include="src\Modules\signalmodule.c" />
+    <ClCompile Include="src\Modules\symtablemodule.c" />
+    <ClCompile Include="src\Modules\_threadmodule.c" />
+    <ClCompile Include="src\Modules\_tracemalloc.c" />
+    <ClCompile Include="src\Modules\timemodule.c" />
+    <ClCompile Include="src\Modules\xxsubtype.c" />
+    <ClCompile Include="src\Modules\zipimport.c" />
+    <ClCompile Include="src\Modules\zlibmodule.c" />
+    <ClCompile Include="src\Modules\_io\fileio.c" />
+    <ClCompile Include="src\Modules\_io\bytesio.c" />
+    <ClCompile Include="src\Modules\_io\stringio.c" />
+    <ClCompile Include="src\Modules\_io\bufferedio.c" />
+    <ClCompile Include="src\Modules\_io\iobase.c" />
+    <ClCompile Include="src\Modules\_io\textio.c" />
+    <ClCompile Include="src\Modules\_io\winconsoleio.c" />
+    <ClCompile Include="src\Modules\_io\_iomodule.c" />
+    <ClCompile Include="src\Modules\zlib\adler32.c" />
+    <ClCompile Include="src\Modules\zlib\compress.c" />
+    <ClCompile Include="src\Modules\zlib\crc32.c" />
+    <ClCompile Include="src\Modules\zlib\deflate.c" />
+    <ClCompile Include="src\Modules\zlib\infback.c" />
+    <ClCompile Include="src\Modules\zlib\inffast.c" />
+    <ClCompile Include="src\Modules\zlib\inflate.c" />
+    <ClCompile Include="src\Modules\zlib\inftrees.c" />
+    <ClCompile Include="src\Modules\zlib\trees.c" />
+    <ClCompile Include="src\Modules\zlib\uncompr.c" />
+    <ClCompile Include="src\Modules\zlib\zutil.c" />
+    <ClCompile Include="src\Modules\cjkcodecs\_codecs_cn.c" />
+    <ClCompile Include="src\Modules\cjkcodecs\_codecs_hk.c" />
+    <ClCompile Include="src\Modules\cjkcodecs\_codecs_iso2022.c" />
+    <ClCompile Include="src\Modules\cjkcodecs\_codecs_jp.c" />
+    <ClCompile Include="src\Modules\cjkcodecs\_codecs_kr.c" />
+    <ClCompile Include="src\Modules\cjkcodecs\_codecs_tw.c" />
+    <ClCompile Include="src\Modules\cjkcodecs\multibytecodec.c" />
+    <ClCompile Include="src\Modules\_winapi.c" />
+    <ClCompile Include="src\Objects\abstract.c" />
+    <ClCompile Include="src\Objects\accu.c" />
+    <ClCompile Include="src\Objects\boolobject.c" />
+    <ClCompile Include="src\Objects\bytes_methods.c" />
+    <ClCompile Include="src\Objects\bytearrayobject.c" />
+    <ClCompile Include="src\Objects\bytesobject.c" />
+    <ClCompile Include="src\Objects\capsule.c" />
+    <ClCompile Include="src\Objects\cellobject.c" />
+    <ClCompile Include="src\Objects\classobject.c" />
+    <ClCompile Include="src\Objects\codeobject.c" />
+    <ClCompile Include="src\Objects\complexobject.c" />
+    <ClCompile Include="src\Objects\descrobject.c" />
+    <ClCompile Include="src\Objects\dictobject.c" />
+    <ClCompile Include="src\Objects\enumobject.c" />
+    <ClCompile Include="src\Objects\exceptions.c" />
+    <ClCompile Include="src\Objects\fileobject.c" />
+    <ClCompile Include="src\Objects\floatobject.c" />
+    <ClCompile Include="src\Objects\frameobject.c" />
+    <ClCompile Include="src\Objects\funcobject.c" />
+    <ClCompile Include="src\Objects\genobject.c" />
+    <ClCompile Include="src\Objects\iterobject.c" />
+    <ClCompile Include="src\Objects\listobject.c" />
+    <ClCompile Include="src\Objects\longobject.c" />
+    <ClCompile Include="src\Objects\memoryobject.c" />
+    <ClCompile Include="src\Objects\methodobject.c" />
+    <ClCompile Include="src\Objects\moduleobject.c" />
+    <ClCompile Include="src\Objects\namespaceobject.c" />
+    <ClCompile Include="src\Objects\object.c" />
+    <ClCompile Include="src\Objects\obmalloc.c" />
+    <ClCompile Include="src\Objects\odictobject.c" />
+    <ClCompile Include="src\Objects\rangeobject.c" />
+    <ClCompile Include="src\Objects\setobject.c" />
+    <ClCompile Include="src\Objects\sliceobject.c" />
+    <ClCompile Include="src\Objects\structseq.c" />
+    <ClCompile Include="src\Objects\tupleobject.c" />
+    <ClCompile Include="src\Objects\typeobject.c" />
+    <ClCompile Include="src\Objects\unicodectype.c" />
+    <ClCompile Include="src\Objects\unicodeobject.c" />
+    <ClCompile Include="src\Objects\weakrefobject.c" />
+    <ClCompile Include="src\Parser\acceler.c" />
+    <ClCompile Include="src\Parser\bitset.c" />
+    <ClCompile Include="src\Parser\firstsets.c" />
+    <ClCompile Include="src\Parser\grammar.c" />
+    <ClCompile Include="src\Parser\grammar1.c" />
+    <ClCompile Include="src\Parser\listnode.c" />
+    <ClCompile Include="src\Parser\metagrammar.c" />
+    <ClCompile Include="src\Parser\myreadline.c" />
+    <ClCompile Include="src\Parser\node.c" />
+    <ClCompile Include="src\Parser\parser.c" />
+    <ClCompile Include="src\Parser\parsetok.c" />
+    <ClCompile Include="src\Parser\tokenizer.c" />
+    <ClCompile Include="src\PC\invalid_parameter_handler.c" />
+    <ClCompile Include="src\PC\winreg.c" />
+    <ClCompile Include="src\PC\config.c" />
+    <ClCompile Include="src\PC\getpathp.c" />
+    <ClCompile Include="src\PC\msvcrtmodule.c" />
+    <ClCompile Include="src\Python\pyhash.c" />
+    <ClCompile Include="src\Python\random.c" />
+    <ClCompile Include="src\Python\_warnings.c" />
+    <ClCompile Include="src\Python\asdl.c" />
+    <ClCompile Include="src\Python\ast.c" />
+    <ClCompile Include="src\Python\bltinmodule.c" />
+    <ClCompile Include="src\Python\ceval.c" />
+    <ClCompile Include="src\Python\codecs.c" />
+    <ClCompile Include="src\Python\compile.c" />
+    <ClCompile Include="src\Python\dynamic_annotations.c" />
+    <ClCompile Include="src\Python\dynload_win.c" />
+    <ClCompile Include="src\Python\errors.c" />
+    <ClCompile Include="src\Python\fileutils.c" />
+    <ClCompile Include="src\Python\formatter_unicode.c" />
+    <ClCompile Include="src\Python\frozen.c" />
+    <ClCompile Include="src\Python\future.c" />
+    <ClCompile Include="src\Python\getargs.c" />
+    <ClCompile Include="src\Python\getcompiler.c" />
+    <ClCompile Include="src\Python\getcopyright.c" />
+    <ClCompile Include="src\Python\getopt.c" />
+    <ClCompile Include="src\Python\getplatform.c" />
+    <ClCompile Include="src\Python\getversion.c" />
+    <ClCompile Include="src\Python\graminit.c" />
+    <ClCompile Include="src\Python\import.c" />
+    <ClCompile Include="src\Python\importdl.c" />
+    <ClCompile Include="src\Python\marshal.c" />
+    <ClCompile Include="src\Python\modsupport.c" />
+    <ClCompile Include="src\Python\mysnprintf.c" />
+    <ClCompile Include="src\Python\mystrtoul.c" />
+    <ClCompile Include="src\Python\peephole.c" />
+    <ClCompile Include="src\Python\pyarena.c" />
+    <ClCompile Include="src\Python\pyctype.c" />
+    <ClCompile Include="src\Python\pyfpe.c" />
+    <ClCompile Include="src\Python\pylifecycle.c" />
+    <ClCompile Include="src\Python\pymath.c" />
+    <ClCompile Include="src\Python\pytime.c" />
+    <ClCompile Include="src\Python\pystate.c" />
+    <ClCompile Include="src\Python\pystrcmp.c" />
+    <ClCompile Include="src\Python\pystrhex.c" />
+    <ClCompile Include="src\Python\pystrtod.c" />
+    <ClCompile Include="src\Python\dtoa.c" />
+    <ClCompile Include="src\Python\Python-ast.c" />
+    <ClCompile Include="src\Python\pythonrun.c" />
+    <ClCompile Include="src\Python\structmember.c" />
+    <ClCompile Include="src\Python\symtable.c" />
+    <ClCompile Include="src\Python\sysmodule.c" />
+    <ClCompile Include="src\Python\thread.c" />
+    <ClCompile Include="src\Python\traceback.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
